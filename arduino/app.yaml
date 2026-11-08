@@ -1,0 +1,5 @@
+name: Signboard
+description: ASL alphabet console. Shows the prompted letter and lights the green or red LED.
+icon: "✋"
+ports:
+  - 8765
