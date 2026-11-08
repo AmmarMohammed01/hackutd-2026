@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Signboard</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="gate" class="gate">
+      <form id="nameForm" class="sheet name-sheet">
+        <p class="eyebrow">One console, whoever's turn it is</p>
+        <h1>Signboard</h1>
+        <p class="lede">Type a name. The laptop camera checks the sign. The Uno Q shows the letter and the lights.</p>
+        <label for="nameInput">Who's playing?</label>
+        <div class="name-row">
+          <input id="nameInput" name="name" maxlength="24" autocomplete="nickname" required />
+          <button type="submit">Start</button>
+        </div>
+        <p id="gateError" class="gate-error" role="alert"></p>
+        <div id="recentPlayers" class="recent"></div>
+      </form>
+    </div>
+
+    <div id="shell" class="shell" hidden>
+      <header class="top">
+        <div>
+          <p class="eyebrow">ASL alphabet</p>
+          <h1>Signboard</h1>
+        </div>
+        <div class="who">
+          <span id="playerName"></span>
+          <button id="switchPlayer" type="button">Switch player</button>
+        </div>
+        <p id="boardStatus" class="board-status">Checking the board</p>
+      </header>
+
+      <main class="layout">
+        <section class="sheet camera-card">
+          <div class="camera-frame">
+            <video id="video" autoplay playsinline muted></video>
+            <canvas id="overlay"></canvas>
+          </div>
+          <div class="seen-row">
+            <p id="seen">Show your hand to the camera.</p>
+            <div class="meter" aria-hidden="true"><span id="meter"></span></div>
+          </div>
+          <p id="cameraError" class="gate-error" role="alert"></p>
+        </section>
+
+        <section class="sheet play-card">
+          <div class="modes" role="group" aria-label="Game mode">
+            <button type="button" id="learnMode" aria-pressed="true">Learn</button>
+            <button type="button" id="recallMode" aria-pressed="false">Recall</button>
+          </div>
+          <p id="prompt" class="prompt">Match this sign</p>
+          <p id="letter" class="letter" aria-live="polite">–</p>
+          <div id="diagram" class="diagram"></div>
+          <p id="feedback" class="feedback" aria-live="polite"></p>
+        </section>
+
+        <aside class="sheet side-card">
+          <p class="eyebrow">Console</p>
+          <div class="oled" aria-hidden="true">
+            <p id="oledLetter">–</p>
+            <p id="oledBanner"></p>
+          </div>
+          <div class="leds">
+            <div class="lamp" id="lampGreen"><span></span>Correct</div>
+            <div class="lamp" id="lampRed"><span></span>Wrong</div>
+          </div>
+          <p class="side-note">Green and red stay off until a letter is held on purpose. A random pose does not count.</p>
+          <div class="stats-head">
+            <h2>Progress</h2>
+            <p id="scoreLine">No scored rounds yet</p>
+          </div>
+          <ul id="stats" class="stats"></ul>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
