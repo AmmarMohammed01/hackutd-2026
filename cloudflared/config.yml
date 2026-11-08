@@ -1,0 +1,12 @@
+# Named tunnel for the live game. Create it with:
+#   cloudflared tunnel login
+#   cloudflared tunnel create givemeasign
+# Then replace REPLACE_WITH_TUNNEL_ID below, in both places.
+# The credentials json stays in your home directory. Do not commit it.
+tunnel: e560ee60-91a4-4245-b301-b9f1c4ba5dce
+credentials-file: ~/.cloudflared/e560ee60-91a4-4245-b301-b9f1c4ba5dce.json
+
+ingress:
+  - hostname: origin.givemeasign.study
+    service: http://127.0.0.1:8000
+  - service: http_status:404

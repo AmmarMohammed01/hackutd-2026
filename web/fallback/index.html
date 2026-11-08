@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GiveMeASign</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #1c1915;
+        --muted: #5e584e;
+        --paper: #fbf6ec;
+        --desk: #e4dccb;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 1.5rem;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 12% 8%, rgba(255, 255, 255, 0.45), transparent 28%),
+          var(--desk);
+        font-family: "Avenir Next", "Segoe UI", sans-serif;
+      }
+      main {
+        width: min(560px, 100%);
+        background: var(--paper);
+        border: 2px solid var(--ink);
+        border-radius: 22px;
+        box-shadow: 8px 8px 0 var(--ink);
+        padding: 2rem;
+      }
+      p.eyebrow {
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-size: 0.72rem;
+        color: var(--muted);
+      }
+      h1 {
+        margin: 0.3rem 0;
+        font-family: "Iowan Old Style", Palatino, Georgia, serif;
+        font-size: 3.4rem;
+        line-height: 0.95;
+        font-weight: 600;
+      }
+      p { line-height: 1.45; }
+      .muted { color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">ASL alphabet</p>
+      <h1>GiveMeASign</h1>
+      <p class="muted">A family console for learning ten hand signs: A, B, C, D, F, I, L, V, W, and Y. The laptop camera checks the sign. An Arduino Uno Q shows the letter and lights green or red.</p>
+      <p>The live demo runs when the console laptop is on. This page stays up when it is not.</p>
+    </main>
+  </body>
+</html>
