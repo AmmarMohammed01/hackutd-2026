@@ -1,4 +1,4 @@
-"""Signboard console service.
+"""GiveMeASign console service.
 
 On the Uno Q this is the App Lab entry point: it accepts a letter and a
 result from the laptop and forwards them to the microcontroller over Bridge.
@@ -120,7 +120,7 @@ def serve():
     thread = threading.Thread(target=server.serve_forever, daemon=True)
     thread.start()
     where = "Uno Q bridge" if ON_BOARD else "laptop mock"
-    print(f"Signboard console ({where}) on port {PORT}", flush=True)
+    print(f"GiveMeASign console ({where}) on port {PORT}", flush=True)
     return server
 
 

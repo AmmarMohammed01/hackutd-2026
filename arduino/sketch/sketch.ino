@@ -17,7 +17,7 @@ void paint() {
   u8g2.clearBuffer();
   if (letter == "-") {
     u8g2.setFont(u8g2_font_6x12_tr);
-    const char *ready = "SIGNBOARD";
+    const char *ready = "GIVE ME A SIGN";
     int width = u8g2.getStrWidth(ready);
     u8g2.drawStr((128 - width) / 2, 36, ready);
   } else {

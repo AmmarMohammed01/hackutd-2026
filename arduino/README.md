@@ -1,4 +1,4 @@
-# Signboard console
+# GiveMeASign console
 
 This folder is the Arduino App Lab app for the Uno Q. The laptop runs the game. This app only displays the letter and drives the LEDs.
 

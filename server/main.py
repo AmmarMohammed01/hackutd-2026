@@ -1,4 +1,4 @@
-"""Local game server for Signboard.
+"""Local game server for GiveMeASign.
 
 Recognition stays in the browser. This process picks the letter, keeps
 player stats, and tells the Uno Q what to show. If the board is unplugged,
@@ -24,8 +24,8 @@ MODES = {"learn", "recall"}
 MIN_CONFIDENCE = 0.62
 
 ROOT = Path(__file__).resolve().parent.parent
-DB_PATH = Path(os.environ.get("SIGNBOARD_DB", ROOT / "server" / "signboard.sqlite"))
-BOARD_URL = os.environ.get("SIGNBOARD_BOARD", "http://127.0.0.1:8765").rstrip("/")
+DB_PATH = Path(os.environ.get("GIVEMEASIGN_DB", ROOT / "server" / "givemeasign.sqlite"))
+BOARD_URL = os.environ.get("GIVEMEASIGN_BOARD", "http://127.0.0.1:8765").rstrip("/")
 DIST = ROOT / "web" / "dist"
 
 db_lock = threading.Lock()
@@ -59,7 +59,7 @@ conn.executescript(
 )
 conn.commit()
 
-app = FastAPI(title="Signboard")
+app = FastAPI(title="GiveMeASign")
 
 
 class NameIn(BaseModel):

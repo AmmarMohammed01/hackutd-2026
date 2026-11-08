@@ -5,8 +5,8 @@ import unittest
 
 sys.path.insert(0, os.path.dirname(__file__))
 
-os.environ["SIGNBOARD_DB"] = os.path.join(tempfile.mkdtemp(), "test.sqlite")
-os.environ["SIGNBOARD_BOARD"] = "http://127.0.0.1:9"
+os.environ["GIVEMEASIGN_DB"] = os.path.join(tempfile.mkdtemp(), "test.sqlite")
+os.environ["GIVEMEASIGN_BOARD"] = "http://127.0.0.1:9"
 
 from fastapi.testclient import TestClient
 

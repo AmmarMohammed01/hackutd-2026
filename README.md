@@ -1,4 +1,4 @@
-# Signboard
+# GiveMeASign
 
 A local ASL alphabet game for HackUTD 2026. One Arduino Uno Q is the family console. Each person picks a name on the laptop, the laptop camera checks the sign, and the board shows the letter plus a green or red light.
 
@@ -42,7 +42,7 @@ The firmware lives in [`arduino/`](arduino/) as an Arduino App Lab app.
 
 1. Finish the Uno Q's first setup in Arduino App Lab, over USB.
 2. Import the `arduino` folder, or create a blank app and copy in `app.yaml`, `python/main.py`, `sketch/sketch.ino`, and `sketch/sketch.yaml`.
-3. If the sketch build cannot find U8g2, add it from the sketch libraries panel. The OLED should then read SIGNBOARD, with both LEDs off.
+3. If the sketch build cannot find U8g2, add it from the sketch libraries panel. The OLED should then read GIVE ME A SIGN, with both LEDs off.
 4. Keep the USB-C data cable connected and forward the console port:
 
 ```sh

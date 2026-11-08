@@ -9,3 +9,5 @@ __pycache__/
 *.sqlite-shm
 .DS_Store
 web/public/wasm/
+
+*.zip

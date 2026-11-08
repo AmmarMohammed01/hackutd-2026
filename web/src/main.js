@@ -45,14 +45,14 @@ const state = {
 
 function loadPlayer() {
   try {
-    return JSON.parse(localStorage.getItem("signboard.player") || "null");
+    return JSON.parse(localStorage.getItem("givemeasign.player") || "null");
   } catch {
     return null;
   }
 }
 
 function savePlayer(player) {
-  localStorage.setItem("signboard.player", JSON.stringify(player));
+  localStorage.setItem("givemeasign.player", JSON.stringify(player));
 }
 
 async function api(path, options = {}) {
